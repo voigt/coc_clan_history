@@ -1,0 +1,21 @@
+{
+  "name": "CoC-Stats",
+  "version": "0.1",
+  "description": "Clash of Clans Stats",
+  "author": "Christoph Voigt",
+  "homepage": "cocstats.christophvoigt.com",
+  "keywords": [
+    "coc",
+    "clash",
+    "clash of clans",
+    "clans"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": "5.5.0"
+  },
+  "dependencies": {
+    "https":"1.0.0",
+    "sqlite3": "3.1.1"
+  }
+}
