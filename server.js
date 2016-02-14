@@ -42,7 +42,9 @@ var printMembers = function(){
     });
 
     return new Promise(function(resolve, reject) {
-        db.all("SELECT * FROM member WHERE member.clan_id = (?)", [49], function(err, rows){
+        db.all("SELECT * FROM member WHERE member.clan_id IN\
+                (SELECT MAX(member.clan_id) FROM member)\
+                ORDER BY member.clan_id ASC;", function(err, rows){
 
             if (err) return reject(err);
 
