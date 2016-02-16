@@ -21,7 +21,7 @@ var printMember = function(name){
 //                resolve(rows);
 //            });
 
-            db.each("SELECT member.id, member.trophies, member.donations, member.donationsReceived, clan.date\
+            db.each("SELECT member.id, member.level, member.trophies, member.donations, member.donationsReceived, clan.date\
                              FROM member LEFT JOIN clan ON member.clan_id = clan.id\
                             WHERE member.name = (?)", [name], function(err, row){
                 if (err) return reject(err);
