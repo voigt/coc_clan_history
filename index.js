@@ -1,7 +1,7 @@
 var fs = require("fs");
 var http = require("https");
 var sqlite3 = require('sqlite3').verbose();
-var dbFile = 'coc.db';
+var dbFile = 'data/coc.db';
 var db = new sqlite3.Database(dbFile);
 var exists = fs.existsSync(dbFile);
 var requestTimeId = 0;
@@ -16,7 +16,7 @@ var options = {
     // https://set7z18fgf.execute-api.us-east-1.amazonaws.com/prod/?route=getClanDetails&clanTag=%23YVY20Y29
     host: 'set7z18fgf.execute-api.us-east-1.amazonaws.com',
     port: '443',
-    path: '/prod/?route=getClanDetails&clanTag=%23YVY20Y29'
+    path: '/prod/?route=getClanDetails&clanTag=%232UGLPJUG'
 };
 
 var createTables = function () {

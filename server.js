@@ -4,7 +4,7 @@ var route = require('koa-route');
 var app = koa();
 var cors = require('kcors');
 var sqlite3 = require('sqlite3').verbose();
-var dbFile = 'coc.db';
+var dbFile = 'data/coc.db';
 var db = new sqlite3.Database(dbFile);
 
 app.use(cors());
@@ -36,7 +36,7 @@ var printMembers = function(){
 
     var clanNumber = undefined;
 
-    db.get("SELECT * FROM clan ORDER BY clan.id DESC LIMIT 1;", ["KG10"], function(err, row){
+    db.get("SELECT * FROM clan ORDER BY clan.id DESC LIMIT 1;", ["Silbermond"], function(err, row){
         if (err) return err;
         console.log(row.id);
     });
